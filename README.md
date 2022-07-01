@@ -513,7 +513,7 @@ Do mesmo modo, o aplicativo precisa permitir uma filtragem por indústria. Vamos
 - A função retorna a quantidade correta de valores
 - A função retorna os valores corretos
 - A função retorna os valores na ordem correta
-- A função retorna uma lista vazia para `job_types` ausentes nos `jobs` recebidos
+- A função retorna uma lista vazia para `industries` ausentes nos `jobs` recebidos
 </details>
 
 ## 8 - Implemente a função `matches_salary_range`

@@ -25,7 +25,7 @@ git filter-repo \
     --path tests/counter/conftest.py \
     --path tests/counter/mocks.py \
     --path tests/brazilian/conftest.py \
-    --path tests/brazilian/mocks.py \    
+    --path tests/brazilian/mocks.py \
     --path .images \
     --path README.md \
     --invert-paths --force

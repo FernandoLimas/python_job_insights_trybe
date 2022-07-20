@@ -9,21 +9,8 @@ def get_unique_job_types(path):
 
 
 def filter_by_job_type(jobs, job_type):
-    """Filters a list of jobs by job_type
-
-    Parameters
-    ----------
-    jobs : list
-        List of jobs to be filtered
-    job_type : str
-        Job type for the list filter
-
-    Returns
-    -------
-    list
-        List of jobs with provided job_type
-    """
-    return []
+    list_dict = [li for li in jobs if li["job_type"] == job_type]
+    return list_dict
 
 
 def get_unique_industries(path):
@@ -53,26 +40,11 @@ def filter_by_industry(jobs, industry):
 
 def get_max_salary(path):
     r = read(path)
-    # max_salary = 0
     list_sal = [s["max_salary"].isnumeric() and int(s["max_salary"])for s in r]
     return max(list_sal)
 
 
 def get_min_salary(path):
-    """Get the minimum salary of all jobs
-
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    int
-        The minimum salary paid out of all job opportunities
-    """
     r = read(path)
     list_sal = [int(s["min_salary"]) for s in r if s["min_salary"].isnumeric()]
     return min(list_sal)

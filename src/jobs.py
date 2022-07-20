@@ -19,6 +19,5 @@ def read(path):
     with open(path) as file:
         reader = csv.DictReader(file)
         list_dict = [row for row in reader]
-        print(list_dict[0])
-        return list_dict
-    return []
+
+    return list_dict
